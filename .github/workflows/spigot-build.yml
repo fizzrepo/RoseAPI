@@ -1,0 +1,28 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Spigot build
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: SpraxDev/Action-SpigotMC@v4
+      with:
+        versions: 1.8.8
+        generateSrc: false
+        generateDoc: false
+        disableJavaCheck: false
+        remapped: false
+        forceRun: false
+        threads: -1
+        buildToolProvider: SpigotMC
