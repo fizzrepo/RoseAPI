@@ -1,0 +1,17 @@
+name: RoseAPI
+version: '${project.version}'
+main: red.fizz.roseapi.RoseAPI
+prefix: RoseAPI
+softdepend: [ PlaceholderAPI ]
+authors: [ fizzdev, Fredthedoggy ]
+description: RoseAPI simplifies the creation of your own API for getting statistics from placeholders and more.
+load: STARTUP
+website: me.fizz.red
+api-version: 1.13
+
+commands:
+  api:
+    description: The main command for RoseAPI.
+    usage: /roseapi
+  apiadmin:
+    description: The main command for running RoseAPI admin commands.

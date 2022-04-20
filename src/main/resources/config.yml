@@ -1,0 +1,15 @@
+version: 1 # do not change, used for upgrading database
+storage_type: sqlite
+server_port: 8080
+show_after: false # show after the key has been generated whenever the player does /api
+
+mysql:
+  username: 'root'
+  password: 'password'
+  host: 'yourdomain.com:3306'
+  database: 'roseapi'
+
+# a list of placeholders allowed. do not include the % or {}!
+placeholders:
+  - "vault_eco_balance"
+  - "player_username"
