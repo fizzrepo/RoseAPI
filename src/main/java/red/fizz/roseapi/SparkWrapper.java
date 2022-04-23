@@ -2,6 +2,8 @@ package red.fizz.roseapi;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
+import red.fizz.roseapi.database.MySQLConnection;
+import red.fizz.roseapi.database.SQLiteConnection;
 import spark.Service;
 
 import java.util.List;

@@ -1,4 +1,6 @@
-package red.fizz.roseapi;
+package red.fizz.roseapi.database;
+
+import red.fizz.roseapi.RoseAPI;
 
 import java.sql.*;
 
@@ -71,6 +73,18 @@ public class SQLiteConnection {
             insertStatement.setString(2, playerUUID);
             insertStatement.setString(3, key);
             insertStatement.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static boolean delKey(String playerUUID) {
+        try {
+            PreparedStatement deleteStatement = connection.prepareStatement("DELETE FROM apikeys WHERE playerUUID=?;");
+            deleteStatement.setString(1, playerUUID);
+            deleteStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();

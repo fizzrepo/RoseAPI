@@ -26,7 +26,7 @@ public class RoseApiLoader {
 
     public void loadWebServer() {
         this.parent.webServer.create(this.parent.config.getInt("server_port"), this.parent.config.getStringList("placeholders"), parent.isUsingMySQL());
-        parent.getLogger().info("[RestPAPI] Enabled On Port " + this.parent.config.getInt("server_port"));
+        parent.getLogger().info("[RoseAPI] Enabled On Port " + this.parent.config.getInt("server_port"));
     }
 
 }

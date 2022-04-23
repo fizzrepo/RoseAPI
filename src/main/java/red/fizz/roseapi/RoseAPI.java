@@ -1,11 +1,12 @@
 package red.fizz.roseapi;
 
-import com.avaje.ebean.validation.NotNull;
 import org.bstats.charts.SimplePie;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bstats.bukkit.Metrics;
+import red.fizz.roseapi.database.MySQLConnection;
+import red.fizz.roseapi.database.SQLiteConnection;
 
 public final class RoseAPI extends JavaPlugin {
 

@@ -10,6 +10,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import red.fizz.roseapi.database.MySQLConnection;
+import red.fizz.roseapi.database.SQLiteConnection;
 
 public class ApiCommand implements CommandExecutor {
 
